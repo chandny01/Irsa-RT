@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f9;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.sidebar ul li a.active {
+    background-color: #34495e;
+    border: 2px solid #ecf0f1;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 40px;
+    flex-grow: 1;
+    color: #333;
+}
+
+section {
+    margin-bottom: 60px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+}
+
+h1, h2, h3 {
+    color: #2980b9;
+    font-size: 2em;
+    text-align: left;
+}
+
+h2 {
+    color: #8e44ad;
+    font-size: 1.5em;
+}
+
+h3 {
+    color: #e74c3c;
+    font-size: 1.2em;
+}
+
+.content p, .content ul, .content .card, .content .card-carre {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.card, .card-carre, .experience-card, .interest-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.interest-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.card-carre {
+    width: calc(25% - 20px); /* 4 cartes par ligne */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box; /* S'assure que padding ne dépasse pas la largeur */
+}
+
+@media (max-width: 900px) {
+    .card-carre {
+        width: calc(50% - 20px); /* 2 cartes par ligne sur petits écrans */
+    }
+}
+
+@media (max-width: 600px) {
+    .card-carre {
+        width: 100%; /* 1 carte par ligne sur très petits écrans */
+    }
+}
+
+/* SECTION PROJETS REALISÉS */
+#projets-realises {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacement entre les cartes */
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 20px; /* Espacement entre les cartes */
+    padding: 0 20px;
+}
+
+#projets-realises .card-carre {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 20px); /* 3 cartes par ligne en largeur par défaut */
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; /* Inclut padding et bordure dans la largeur */
+}
+
+@media (max-width: 900px) {
+    #projets-realises .card-carre {
+        flex: 1 1 calc(50% - 20px); /* 2 cartes par ligne sur petits écrans */
+    }
+}
+
+@media (max-width: 600px) {
+    #projets-realises .card-carre {
+        flex: 1 1 100%; /* 1 carte par ligne sur très petits écrans */
+    }
+}
+
+/* Style pour le bouton */
+.btn-projet {
+    display: inline-block;
+    background-color: #2980b9; /* Couleur bleu clair */
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol du bouton */
+.btn-projet:hover {
+    background-color: #1f6d98; /* Couleur plus foncée au survol */
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 250px);
+}
+
+/* ===== STYLE POUR LE TEXTE DE PRÉSENTATION ===== */
+.presentation {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 50px;
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
