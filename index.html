@@ -158,28 +158,32 @@
             </div>
         </section>
 
-        <section id="contact" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-            <h1>Contact</h1>
-            <p>N'hésitez pas à me contacter pour échanger ou en savoir plus !</p>
+<section id="contact" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+    <h1>Contact</h1>
+    <p>N'hésitez pas à me contacter pour échanger ou en savoir plus !</p>
+
+    <!-- Formulaire avec Formspree -->
+    <form action="https://formspree.io/f/movepajv" method="POST" style="display: flex; flex-direction: column; align-items: center; gap: 10px; max-width: 500px; width: 100%;">
         
-            <!-- Formulaire avec Formspree -->
-            <form action="https://formspree.io/f/movepajv" method="POST" style="display: flex; flex-direction: column; align-items: center; gap: 10px; max-width: 500px; width: 100%;">
-                <!-- Champ email -->
-                <label style="width: 100%;">
-                    Votre email:
-                    <input type="email" name="email" required placeholder="Entrez votre email" style="width: 100%; padding: 10px; font-size: 16px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
-                </label>
-        
-                <!-- Champ message -->
-                <label style="width: 100%;">
-                    Votre message:
-                    <textarea name="message" required placeholder="Votre message" rows="10" style="width: 100%; padding: 10px; font-size: 16px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-                </label>
-        
-                <!-- Bouton pour envoyer -->
-                <button type="submit" style="background-color: #007bff; color: white; cursor: pointer; padding: 10px 20px; border: none; border-radius: 5px;">Envoyer</button>
-            </form>
-        </section>
+        <!-- Champ email -->
+        <label style="width: 100%;">
+            Votre email:
+            <input type="email" name="email" required placeholder="Entrez votre email" style="width: 100%; padding: 10px; font-size: 16px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;">
+        </label>
+
+        <!-- Champ message -->
+        <label style="width: 100%;">
+            Votre message:
+            <textarea name="message" required placeholder="Votre message" rows="10" style="width: 100%; padding: 10px; font-size: 16px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+        </label>
+
+        <!-- Ajouter le widget reCAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="VOTRE_CLE_SITE"></div>
+
+        <!-- Bouton pour envoyer -->
+        <button type="submit" style="background-color: #007bff; color: white; cursor: pointer; padding: 10px 20px; border: none; border-radius: 5px;">Envoyer</button>
+    </form>
+</section>
         
        
     </div>
